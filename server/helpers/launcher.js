@@ -28,15 +28,7 @@ switch (process.argv[2]) {
         require(kiwi_app);
         break;
 
-    case 'start':
-        if (process.argv.indexOf('-f') > -1) {
-            require(kiwi_app);
-        } else {
-            daemon.start();
-        }
-        break;
-
-    case 'stop':
+   case 'stop':
         daemon.stop();
         break;
 
@@ -67,7 +59,14 @@ switch (process.argv[2]) {
     case 'build':
         require('./build.js');
         break;
-
-    default:
+        
+    case '/?':
         console.log('Usage: [-f|start|stop|restart|status|reconfig|build [-v] [-c <config file>] [-p <pid file>]]');
+        break;
+    default:
+        if (process.argv.indexOf('-f') > -1) {
+            require(kiwi_app);
+        } else {
+            daemon.start();
+        }
 }
