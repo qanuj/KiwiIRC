@@ -351,5 +351,5 @@ process.on('SIGUSR2', function() {
 /*
  * Listen for runtime commands
  */
-process.stdin.resume();
-new ControlInterface(process.stdin, process.stdout, {prompt: ''});
+//process.stdin.resume();
+//new ControlInterface(process.stdin, process.stdout, {prompt: ''});
