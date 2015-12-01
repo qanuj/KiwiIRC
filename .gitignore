@@ -8,5 +8,7 @@ client/assets/kiwi.min.js
 client/assets/locales/*.json
 client/index.html
 kiwi.log
+kiwi*.log
 kiwiirc.pid
 config.js
+iisnode
